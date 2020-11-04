@@ -13,6 +13,6 @@ module "primaryRegion" {
 }
 module "secondaryRegion" {
   source    = "./multi-region"
-  count     = var.deploymentEnvironment == "PROD" || var.deploymentEnvironment == "STG" ? 1 : 0
+ # count     = var.deploymentEnvironment == "PROD" || var.deploymentEnvironment == "STG" ? 1 : 0
   location  = var.secondaryLocation
 }
